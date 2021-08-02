@@ -24,5 +24,3 @@ var users = [
 console.log(users);
 
 console.log(1);
-
-
