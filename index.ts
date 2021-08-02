@@ -8,7 +8,7 @@ interface userInfoTypes {
     surname:string,
     age:ageType,
     gender?: "Man" | "Woman",
-    address?: string
+    address?: stringnode
 }
 
 let userInfo: userInfoTypes = {
@@ -17,6 +17,18 @@ let userInfo: userInfoTypes = {
     age: 22,
     gender: "Man"
 }
+
+const isNew: boolean = true;
+
+let list: number[] = [1,2,3];
+let newList: Array<number> = [1,2,3];
+
+let user1: [string, number] = ["Onur", 22];
+
+enum Color {Red = 5, Green, Blue};
+
+let c: Color = Color.Green;
+console.log(c);
 
 
 type MathTypes = (x: number, y: number) => number;
@@ -40,3 +52,33 @@ const users: userInfoTypes[] = [
         address: "Address Test 2"
     }
 ]
+
+
+let newVariable: unknown = "alp";
+
+function hasName(obj: any): obj is { name: string } {
+    return !!obj &&
+        typeof obj === "object" &&
+        "name" in obj
+}
+
+if(hasName(newVariable)) {
+    console.log(newVariable.name);
+}
+
+(newVariable as string).toUpperCase();
+
+
+let a;
+a = 10;
+a = true;
+
+let b = 20;
+
+let multiType: number | boolean;
+multiType = 20;
+multiType = true;
+
+let anyType: any;
+anyType = 20;
+anyType true;
