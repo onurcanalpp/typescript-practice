@@ -21,3 +21,8 @@ var users = [
         address: "Address Test 2"
     }
 ];
+console.log(users);
+
+console.log(1);
+
+
