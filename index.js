@@ -34,3 +34,45 @@ var users = [
         address: "Address Test 2"
     }
 ];
+var newVariable = "alp";
+function hasName(obj) {
+    return !!obj &&
+        typeof obj === "object" &&
+        "name" in obj;
+}
+if (hasName(newVariable)) {
+    console.log(newVariable.name);
+}
+newVariable.toUpperCase();
+var a;
+a = 10;
+a = true;
+var b = 20;
+var multiType;
+multiType = 20;
+multiType = true;
+var anyType;
+anyType = 20;
+anyType = true;
+function add(num1, num2) {
+    if (num2 === void 0) { num2 = 10; }
+    if (num2) {
+        return num1 + num2;
+    }
+    else {
+        return num1;
+    }
+}
+console.log(add(1));
+var Employee = /** @class */ (function () {
+    function Employee(name) {
+        this.employeeName = name;
+    }
+    Employee.prototype.messageFunc = function () {
+        console.log("Message For " + this.employeeName);
+    };
+    return Employee;
+}());
+var emp1 = new Employee('Onur');
+console.log(emp1.employeeName);
+emp1.messageFunc();

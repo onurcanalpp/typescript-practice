@@ -8,7 +8,7 @@ interface userInfoTypes {
     surname:string,
     age:ageType,
     gender?: "Man" | "Woman",
-    address?: stringnode
+    address?: string
 }
 
 let userInfo: userInfoTypes = {
@@ -81,4 +81,35 @@ multiType = true;
 
 let anyType: any;
 anyType = 20;
-anyType true;
+anyType = true;
+
+
+
+function add(num1: number, num2: number = 10): number{
+    if(num2){
+        return num1 + num2;
+    }else {
+        return num1;
+    }
+}
+
+console.log(add(1));
+
+
+class Employee {
+    employeeName: string;
+
+    constructor(name: string) {
+        this.employeeName = name;
+    }
+
+    messageFunc() {
+        console.log(`Message For ${this.employeeName}`);
+    }
+}
+
+
+let emp1 = new Employee('Onur');
+
+console.log(emp1.employeeName);
+emp1.messageFunc();
